@@ -1,4 +1,4 @@
-package com.example.crest;
+package com.example.projectcrest;
 
 import org.junit.Test;
 

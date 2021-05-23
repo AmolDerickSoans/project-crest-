@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.crest">
+    package="com.example.projectcrest">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Crest">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_login_page"
-            android:theme="@style/Theme.Crest.NoActionBar"
-
-            ></activity>
-        <activity android:name=".LoginPage">
+        android:theme="@style/Theme.Projectcrest">
+        <activity android:name=".LandingPage"></activity>
+        <activity android:name=".LoginPage" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
