@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sidebar_nav"
+    app:startDestination="@id/contact_us">
+
+    <fragment
+        android:id="@+id/contact_us"
+        android:name="com.example.projectcrest.fragments.contact_us"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.projectcrest.fragments.profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/purchase_history"
+        android:name="com.example.projectcrest.fragments.purchase_history"
+        android:label="fragment_purchase_history"
+        tools:layout="@layout/fragment_purchase_history" />
+</navigation>

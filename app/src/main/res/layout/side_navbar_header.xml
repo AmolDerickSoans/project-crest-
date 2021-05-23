@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:background="@color/purple_200"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+             />
+
+        <TextView
+            android:id="@+id/side_navbar_name"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Satoshi Nakamoto"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/side_navbar_profession"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Student" />
+
+
+    </LinearLayout>

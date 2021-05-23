@@ -1,4 +1,4 @@
-package com.example.projectcrest;
+package com.example.projectcrest.pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.projectcrest.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -54,4 +55,5 @@ public class LoginPage extends AppCompatActivity {
             }
         });
     }
+
 }
