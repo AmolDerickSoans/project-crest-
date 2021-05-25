@@ -22,12 +22,16 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "1";
     private FirebaseAuth auth;
     private GoogleSignInClient mGoogleSignInClient;
     ImplementFirebaseActions fa = new ImplementFirebaseActions();
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fa.signOut(MainActivity.this);
+        fa.signOut(this);
 
         EditText fullName = findViewById(R.id.fullNameText);
         EditText emailId = findViewById(R.id.emailIdText);
@@ -125,22 +129,11 @@ public class MainActivity extends AppCompatActivity {
     public void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            Log.d(TAG, "handleSignInResult: Yes Logged in");
             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-            if (acct != null) {
-                String personName = acct.getDisplayName();
-                String personGivenName = acct.getGivenName();
-                String personFamilyName = acct.getFamilyName();
-                String personEmail = acct.getEmail();
-                String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
-            }
-
-            Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            Log.d("LOGGED INNN", "LOGGED INNN");
-
-
 
             Intent i = new Intent(this, LandingPage.class);
+            i.setFlags( Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(i);
 
             // Signed in successfully, show authenticated UI.

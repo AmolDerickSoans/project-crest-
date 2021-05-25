@@ -4,8 +4,9 @@ import java.util.Date;
 public class User {
     private long id;
     private String email;
-    private String password;
-    private Date createDate;
+    private String name;
+    private int age;
+    private int profession;
 
     public long getId() {
         return id;
@@ -23,26 +24,35 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public int getAge() {
+        return age;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public User(long id, String email, String password, Date createDate) {
+    public int getProfession() {
+        return profession;
+    }
+
+    public void setProfession(int profession) {
+        this.profession = profession;
+    }
+
+    public User(long id, String email, String name, int age, int profession) {
         this.id = id;
         this.email = email;
-        this.password = password;
-        this.createDate = Calendar.getInstance().getTime();
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
     }
 }

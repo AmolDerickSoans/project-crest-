@@ -7,8 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.projectcrest.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +19,13 @@ import com.example.projectcrest.R;
  * create an instance of this fragment.
  */
 public class profile extends Fragment {
+
+    FirebaseAuth firebaseAuth;
+    EditText profile_fullName_txt;
+    EditText profile_age_txt;
+    EditText profile_profession_txt;
+    EditText profile_emailId_txt;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,7 +70,22 @@ public class profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        profile_fullName_txt = v.findViewById(R.id.profile_fullName);
+        profile_age_txt = v.findViewById(R.id.profile_age);
+        profile_profession_txt = v.findViewById(R.id.profile_proffession);
+        profile_emailId_txt = v.findViewById(R.id.profile_emailid);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+
+        String userEmail = currentUser.getEmail();
+        String userUid = currentUser.getUid();
+
+        profile_emailId_txt.setText(userEmail);
+
+
+        return v;
     }
 }

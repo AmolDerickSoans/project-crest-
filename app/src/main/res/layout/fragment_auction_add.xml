@@ -1,14 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.auction_add">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="false"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Auction Add Page"
-        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.auction_add"
+        android:paddingBottom="50dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:paddingTop="20dp"
+            android:text="Enter Auction Details -"
+            android:textSize="40dp"></TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingVertical="5dp">
+
+
+            <ImageView
+                android:id="@+id/auction_add_imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_launcher_background"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+
+            <ImageButton
+                android:id="@+id/auction_add_imageView_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:src="@drawable/ic_baseline_add_24"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+
+
+            <EditText
+                android:id="@+id/auction_itemName"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center"
+                android:hint="Name of Item"
+                android:maxLines="1"
+                android:overScrollMode="ifContentScrolls" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp">
+
+
+            <EditText
+                android:id="@+id/auction_add_description"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center"
+                android:hint="Description"
+                android:maxLength="40"
+                android:maxLines="5"
+                android:minHeight="100dp"
+                android:overScrollMode="ifContentScrolls"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingVertical="5dp">
+
+
+            <EditText
+                android:id="@+id/auction_initialPrice"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center"
+                android:hint="Initial Price"
+                android:maxLines="1"
+                android:overScrollMode="ifContentScrolls" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingVertical="5dp">
+
+
+            <EditText
+
+                android:id="@+id/auction_add_startTimePicker"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center"
+                android:hint="Start Time"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingVertical="5dp">
+
+            <EditText
+                android:id="@+id/auction_add_endTimePicker"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center"
+                android:hint="End Time"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="30dp"
+            android:gravity="center"
+            android:paddingVertical="5dp">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_edittext"
+                android:text="Post Item" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
